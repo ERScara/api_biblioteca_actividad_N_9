@@ -49,7 +49,7 @@ router.post("/", requiredScopes("write:libros"), createLibro, (req, res) => {
       } catch (error) {
         res.status(500).json({ error: "Error al crear el usuario" });
       }
-    });
+});
 
 // Ruta para actualizar un Libro existente
 router.put("/:id", requiredScopes("write:libros"), updateLibro, (req, res) => {
